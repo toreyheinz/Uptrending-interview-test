@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'mongo_mapper'
+gem 'mongo_mapper', :github => 'jnunemaker/mongomapper'
 gem 'bson_ext'
 gem 'simple_form'
 # Bundle edge Rails instead:
