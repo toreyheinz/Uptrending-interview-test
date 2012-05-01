@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
 */
+
+#new_task div.input {display: inline-block;}
+
+#incomplete form {display: inline-block;}
