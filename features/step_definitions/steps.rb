@@ -2,8 +2,8 @@ Given /^I am on the home page$/ do
   visit root_path
 end
 
-When /^I enter a task "([^"]*)"$/ do |name|
-  fill_in 'Task', :with => name
+When /^I enter a task "([^"]*)"$/ do |task_name|
+  fill_in 'Task', :with => task_name
   click_on 'Add Task'
 end
 
@@ -11,8 +11,8 @@ Then /^I should see "([^"]*)"$/ do |text|
   page.should have_content(text)
 end
 
-When /^I mark "([^"]*)" as done$/ do |name|
-  within('li', :text => name) do
+When /^I mark "([^"]*)" as done$/ do |task_name|
+  within('li', :text => task_name) do
     click_on 'Done'
   end
 end
