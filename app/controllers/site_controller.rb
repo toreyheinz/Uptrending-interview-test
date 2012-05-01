@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
   def home
     @task = Task.new
-    @tasks = Task.undone
+    @tasks = Task.all
   end
 end
