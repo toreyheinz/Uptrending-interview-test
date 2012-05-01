@@ -7,6 +7,6 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li id="<%= task.id %>"><%= task.name %> <%= button_to 'Done', mark_done_task_path(task) %></li>
+    <li><%= task.name %> <%= button_to 'Done', mark_done_task_path(task) %></li>
   <% end %>
 </ul>

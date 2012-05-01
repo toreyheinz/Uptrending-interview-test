@@ -12,8 +12,7 @@ Then /^I should see "([^"]*)"$/ do |text|
 end
 
 When /^I mark "([^"]*)" as done$/ do |name|
-  task = Task.find_by_name(name)
-  within "##{task.id}" do
+  within('li', :text => name) do
     click_on 'Done'
   end
 end
