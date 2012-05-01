@@ -1,0 +1,12 @@
+<h1>Torey's Todo's</h1>
+
+<%= simple_form_for @task do |f| %>
+  <%= f.input :name, :label => 'Task' %>
+  <%= f.submit 'Add Task' %>
+<% end %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li id="<%= task.id %>"><%= task.name %> <%= button_to 'Done', mark_done_task_path(task) %></li>
+  <% end %>
+</ul>
