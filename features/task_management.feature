@@ -13,4 +13,5 @@ Scenario: I can mark tasks as done
   And I enter a task "Clean up back yard"
   When I mark "Finish trim next to frig" as done
   Then I should see "Finish trim next to frig is COMPLETE!"
+  And "Finish trim next to frig" should be completed
   

@@ -6,7 +6,13 @@
 <% end %>
 
 <ul>
-  <% @tasks.each do |task| %>
+  <% @incomplete_tasks.each do |task| %>
     <li><%= task.name %> <%= button_to 'Done', mark_done_task_path(task) %></li>
+  <% end %>
+</ul>
+
+<ul id="completed">
+  <% @completed_tasks.each do |task| %>
+    <li><%= task.name %></li>
   <% end %>
 </ul>

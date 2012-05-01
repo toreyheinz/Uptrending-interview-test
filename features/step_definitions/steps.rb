@@ -16,3 +16,9 @@ When /^I mark "([^"]*)" as done$/ do |name|
     click_on 'Done'
   end
 end
+
+Then /^"([^"]*)" should be completed$/ do |task_name|
+  within '#completed' do
+    page.should have_content(task_name)
+  end
+end
