@@ -1,6 +1,6 @@
 <h1>Torey's Todo's</h1>
 
-<%= simple_form_for @task do |f| %>
+<%= simple_form_for Task.new do |f| %>
   <%= f.input :name, :label => 'Task' %>
   <%= f.submit 'Add Task' %>
 <% end %>
