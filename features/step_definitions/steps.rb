@@ -22,3 +22,9 @@ Then /^"([^"]*)" should be completed$/ do |task_name|
     page.should have_content(task_name)
   end
 end
+
+Then /^"([^"]*)" should be incomplete$/ do |task_name|
+  within '#incomplete' do
+    page.should have_content(task_name)
+  end
+end
